@@ -41,7 +41,9 @@ const request = (creq, cres) => {
     };
     
     const purposeReq = http.request(options, (purposeRes) => {
-        
+        if(options.hostname == 'life.rccoder.net') {
+            
+        }
         cres.writeHead(purposeRes.statusCode, purposeRes.headers);
         purposeRes.pipe(cres);
         
